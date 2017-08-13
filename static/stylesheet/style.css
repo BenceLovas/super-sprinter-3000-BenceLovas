@@ -8,16 +8,16 @@ body {
 }
 
 button {
-    background-color: #42f49e;
-    color: black;
-    padding: 15px 32px;
+    background-color: #8B7D6B;
+    color: white;
+    padding: 10px 20px;
     font-size: 16px;
     transition-duration: 0.4s;
+    border-radius: 10px;
 }
 
 button:hover {
-    background-color: #30b575;
-    color: white;
+    background-color: #443d35;
 }
 
 textarea {
@@ -44,11 +44,13 @@ td:nth-child(8):hover {
 td:last-child {
     background: aqua;
     padding: 5px;
+    border-radius: 5px;
 }
 
 td:nth-child(8) {
     background: red;
     padding: 5px;
+    border-radius: 5px;
 }
 
 th, td {
