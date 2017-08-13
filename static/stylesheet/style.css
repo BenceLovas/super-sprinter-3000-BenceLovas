@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Convergence');
+
+body {
+    background: #fff;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 20px;
+}
+
+button {
+    background-color: #42f49e;
+    color: black;
+    padding: 15px 32px;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #30b575;
+    color: white;
+}
+
+textarea {
+    resize: none;
+    font-family: 'Convergance', sans-serif;
+    background: #ddd;
+}
+
+textarea:focus {
+    background: #fff;
+}
+
+td:hover {
+    background: #ddd;
+}
+
+td:last-child:hover,
+td:nth-child(8):hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 0px 3px 10px #666;
+}
+
+td:last-child {
+    background: aqua;
+    padding: 5px;
+}
+
+td:nth-child(8) {
+    background: red;
+    padding: 5px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    font-size: 16px;
+    font-family: 'Convergance', sans-serif;
+}
+
+th {
+    background-color: #8B7D6B;
+    color: white;
+    font-size: 20px;
+    font-family: "Saira Extra Condensed", sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+}
