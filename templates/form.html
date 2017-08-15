@@ -13,17 +13,17 @@
         {% elif mode == 'create' %}
             <form action="{{ url_for('route_save_story') }}" method="POST">
         {% endif %}
-            <p>Story Title</p>
+                <p>Story Title</p>
                 <textarea name="title" rows="1" cols="50" placeholder="Type here..">{{ selected_story_dict.get('title', '') }}</textarea>
-            <p>User Story</p>
+                <p>User Story</p>
                 <textarea name="story" rows="6" cols="50" placeholder="Type here..">{{ selected_story_dict.get('story', '') }}</textarea>
-            <p>Acceptance Criteria</p>
+                <p>Acceptance Criteria</p>
                 <textarea name="criteria" rows="6" cols="50" placeholder="Type here..">{{ selected_story_dict.get('criteria', '') }}</textarea>
-            <p>Business Value</p>
+                <p>Business Value</p>
                 <input name="value" type="number" min="100" max="1500" step="100" value="{{ selected_story_dict.get('value', '1000') }}">
-            <p>Estimation (h)</p>
+                <p>Estimation (h)</p>
                 <input name="estimation" type="number" min="0.5" max="40" step="0.5" value="{{ selected_story_dict.get('estimation', '2.5') }}">
-            <p>Status</p>
+                <p>Status</p>
                 <select name="status">
                     {% for option in options %}
                         {% if option == selected_story_dict.get('status') %}

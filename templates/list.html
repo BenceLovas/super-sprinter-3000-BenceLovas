@@ -15,28 +15,28 @@
         {% else %}
             <table>
                 <tr>
-                    {% for header in table_header %}
-                        <th>{{ header }}</th>
-                    {% endfor %}
+                {% for header in table_header %}
+                    <th>{{ header }}</th>
+                {% endfor %}
                 </tr>
-                    {% for item in data_list %}
-                        <tr>
-                        {% for i in item %}
-                            <td>{{ i }}</td>
-                        {% endfor %}
-                            <td>
-                                <form action="{{ url_for('route_delete_story') }}" method="POST">
-                                    <input name="id_story" type="hidden" value="{{ item[0] }}">
-                                    <input type="image" width="25" height="25" src="https://cdn1.iconfinder.com/data/icons/toolbar-signs/512/trash-24.png" alt="Submit Form">
-                                </form>
-                            </td>    
-                            <td>
-                                <form action="{{ url_for('route_id_story', id_story=item[0]) }}">    
-                                    <input type="image" width="25" height="25" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/edit-24.png">
-                                </form>
-                            </td>    
-                        </tr>
+                {% for item in data_list %}
+                <tr>
+                    {% for i in item %}
+                        <td>{{ i }}</td>
                     {% endfor %}
+                        <td>
+                            <form action="{{ url_for('route_delete_story') }}" method="POST">
+                                <input name="id_story" type="hidden" value="{{ item[0] }}">
+                                <input type="image" width="25" height="25" src="https://cdn1.iconfinder.com/data/icons/toolbar-signs/512/trash-24.png">
+                            </form>
+                        </td>    
+                        <td>
+                            <form action="{{ url_for('route_id_story', id_story=item[0]) }}">    
+                                <input type="image" width="25" height="25" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/edit-24.png">
+                            </form>
+                        </td>    
+                </tr>
+                {% endfor %}
             </table>
         {% endif %}        
     </body>

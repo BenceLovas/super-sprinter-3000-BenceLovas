@@ -1,3 +1,4 @@
+from settings import DATA_LABELS
 import csv
 
 
@@ -16,8 +17,7 @@ def get_id_form_file(filename='data.csv'):
 
 
 def write_form_to_file(request_form_dict, id_story, filename='data.csv'):
-    data_labels = ['title', 'story', 'criteria', 'value', 'estimation', 'status']
-    to_write = [request_form_dict[label] for label in data_labels]
+    to_write = [request_form_dict[label] for label in DATA_LABELS]
     to_write.insert(0, str(id_story))
     with open(filename, 'a') as f:
         writer = csv.writer(f)
@@ -26,7 +26,7 @@ def write_form_to_file(request_form_dict, id_story, filename='data.csv'):
 
 def read_file(filename='data.csv'):
     try:
-        with open('data.csv', newline='') as f:
+        with open(filename, newline='') as f:
             reader = csv.reader(f)
             return [item for item in reader]
     except FileNotFoundError:
